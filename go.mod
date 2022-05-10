@@ -2,6 +2,7 @@ module go_test
 
 go 1.13
 
-require github.com/hsbyhub/gotools v1.0.3
-
-replace github.com/hsbyhub/gotools => /Users/hsby/go/src/github.com/hsbyhub/gotools
+require (
+	github.com/fatih/vim-go-tutorial v0.0.0-20181010233933-3f8bbd5f5e07 // indirect
+	github.com/hsbyhub/gotools v1.0.3
+)
