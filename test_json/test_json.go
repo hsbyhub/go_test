@@ -7,38 +7,26 @@ import (
 
 type Student struct {
     Name    string  `json:"StuName"`
-    Age     int
-    Sex     string
-    Class   *Class  `json:"StuClass"`
+    Age     int     `json:"age"`
+    Sex     int     `json:"sex"`
 }
 
-type Class struct {
-    Name    string
-    Grade   int
-}
-
-func TestJson() {
-    //实例化一个数据结构，用于生成json字符串
-    stu := Student{
-        Name: "张三",
-        Age:  18,
-        Sex:  "男",
-    }
-
+func testPointStruct() {
     //指针变量
-    cla := new(Class)
-    cla.Name = "1班"
-    cla.Grade = 3
-    stu.Class=cla
-
+    stu := &Student {
+        Name: "mike", 
+        Age: 19,
+        Sex: 0,
+    }
     //Marshal失败时err!=nil
-    jsonStu, err := json.Marshal(stu)
+    jsonStu, err := json.Marshal(*stu)
     if err != nil {
         fmt.Println("生成json字符串错误")
     }
 
     //jsonStu是[]byte类型，转化成string类型便于查看
     fmt.Println(string(jsonStu))
+
 }
 
 func TestMapToJson() {
@@ -56,5 +44,5 @@ func TestMapToJson() {
 }
 
 func main() {
-    TestMapToJson()
+    testPointStruct()
 }
