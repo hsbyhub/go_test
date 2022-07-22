@@ -1,4 +1,4 @@
-package main
+package test
 
 func main() {
 	mp map[string]string

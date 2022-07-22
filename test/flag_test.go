@@ -3,7 +3,7 @@
  * @Author: 数据体系-xiesenxin
  * @Date：2022/4/29
  */
-package main
+package test
 
 import (
 	"flag"

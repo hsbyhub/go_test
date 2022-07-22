@@ -1,8 +1,9 @@
-package main
+package test
 
 import (
 	"context"
 	"fmt"
+	"testing"
 	"time"
 )
 
@@ -23,7 +24,7 @@ func work(ctx context.Context, id int) {
 	}
 }
 
-func main() {
+func TestCancel(t *testing.T) {
 	ctx, _ := context.WithCancel(context.Background())
 	go work(ctx, 0)
 	time.Sleep(3 * time.Second)
