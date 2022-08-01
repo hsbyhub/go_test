@@ -1,8 +1,11 @@
 package test
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-func main() {
+func TestFmt(t *testing.T) {
 	v := []string{
 		"abc", "efg", "hij",
 	}

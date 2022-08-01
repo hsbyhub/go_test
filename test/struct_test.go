@@ -1,6 +1,9 @@
 package test
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 type Man struct {
 	Name string
@@ -24,6 +27,6 @@ func changeStruct(m *Man) {
 	}
 }
 
-func main() {
+func TestStruct(t *testing.T) {
 	testStructChange()
 }

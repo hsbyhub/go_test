@@ -3,9 +3,10 @@ package test
 import (
 	"fmt"
 	"os"
+	"testing"
 )
 
-func main() {
+func TestOsArgs(t *testing.T) {
 	for _, v := range os.Args {
 		fmt.Println(v)
 	}

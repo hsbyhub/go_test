@@ -1,7 +1,10 @@
 package test
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-func main() {
+func TestString(t *testing.T) {
 	fmt.Println("abc")
 }

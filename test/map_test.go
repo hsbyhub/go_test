@@ -1,10 +1,12 @@
 package test
 
-import "fmt"
+import (
+	"log"
+	"testing"
+)
 
-func main() {
-	mp := make(map[int]interface{})
-	mp[1] = "str"
-	v, ok := mp[1].(int64)
-	fmt.Println(v, ok)
+func TestMap(t *testing.T) {
+	mp := make(map[int]int)
+	mp[100] += 999
+	log.Println(mp[100])
 }

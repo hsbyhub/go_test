@@ -2,6 +2,7 @@ package test
 
 import (
 	"fmt"
+	"testing"
 )
 
 var end chan int
@@ -19,7 +20,7 @@ func write(ch chan<- int) {
 	fmt.Println("after write")
 }
 
-func main() {
+func TestChannel(t *testing.T) {
 	end = make(chan int)
 	ch := make(chan int, 1)
 	go write(ch)

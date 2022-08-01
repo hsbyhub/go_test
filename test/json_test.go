@@ -41,18 +41,18 @@ func testMapToJson() {
 	var params map[string]interface{}
 	err := json.Unmarshal([]byte(paramsJsonStr), &params)
 	if err != nil {
-		fmt.Println("json.Unmarshal error [%v]", err)
+		fmt.Printf("json.Unmarshal error [%v]", err)
 		return
 	}
-	fmt.Println("json.Unmarshal result [%v]", params)
+	fmt.Printf("json.Unmarshal result [%v]", params)
 
 	var resultJson []byte
 	resultJson, err = json.Marshal(params)
 	if err != nil {
-		fmt.Println("json.Marshal error [%v]", err)
+		fmt.Printf("json.Marshal error [%v]", err)
 		return
 	}
-	fmt.Println("json.Marshal return [%v]", string(resultJson))
+	fmt.Printf("json.Marshal return [%v]", string(resultJson))
 }
 
 func main() {

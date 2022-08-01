@@ -8,6 +8,7 @@ package test
 import (
 	"flag"
 	"os"
+	"testing"
 )
 import "fmt"
 
@@ -32,7 +33,7 @@ func usage() {
 	flag.PrintDefaults()
 }
 
-func main() {
+func TestFlag(t *testing.T) {
 	flag.Parse()
 	fmt.Println(h)
 	fmt.Println(v)
